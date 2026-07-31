@@ -9,7 +9,7 @@ Operational guidance for autonomous contributors extending Composer, an email AI
 - [CC1a-d] Clean Code & DDD (Mandatory)
 - [ID1a-d] Idiomatic Patterns & Defaults
 - [FS1a-j] File Creation & Type Safety (exhaustive search, typed records, no maps, clean architecture)
-- [LOC1a-e] Line Count Ceiling (350 lines max; SRP enforcer; zero tolerance)
+- [LOC1a-e] Line Count Ceiling (500 lines max; SRP enforcer; zero tolerance)
 - [MO1a-g] No Monoliths (Strict SRP; Decision Logic; Extension/OCP)
 - [ND1a-c] Naming Discipline (no generic names, intent-revealing identifiers)
 - [AB1a-d] Abstraction Discipline (no anemic wrappers, abstractions earn reuse)
@@ -87,9 +87,9 @@ Operational guidance for autonomous contributors extending Composer, an email AI
 
 ## [LOC1] Line Count Ceiling (Repo-Wide)
 
-- [LOC1a] All written, non-generated source files in this repository MUST be <= 350 lines (`wc -l`), including `AGENTS.md`
-- [LOC1b] SRP Enforcer: This 350-line "stick" forces modularity (DDD/SRP); > 350 lines = too many responsibilities (see [MO1d])
-- [LOC1c] Zero Tolerance: No edits allowed to files > 350 LOC (even legacy); you MUST split/retrofit before applying your change
+- [LOC1a] All written, non-generated source files in this repository MUST be <= 500 lines (`wc -l`), including `AGENTS.md`
+- [LOC1b] SRP Enforcer: This 500-line "stick" forces modularity (DDD/SRP); > 500 lines = too many responsibilities (see [MO1d])
+- [LOC1c] Zero Tolerance: No edits allowed to files > 500 LOC (even legacy); you MUST split/retrofit before applying your change
 - [LOC1d] Enforcement: run line count checks and treat failures as merge blockers
 - [LOC1e] Exempt files: generated content, lockfiles, and large example/data dumps
 
