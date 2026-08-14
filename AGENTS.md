@@ -254,7 +254,8 @@ Before marking task complete:
 - ✅ `make lint` passes
 - ✅ Commits merged to `dev` and pushed
 - ✅ CI run watched to terminal verdict
-- ✅ Covered issues closed
+- ✅ Covered issues closed; new issues filed only for material defects or features (behavior, correctness, security, performance, data quality, or a governed contract) — pedantic/nitpick/style-only findings fixed in place or dropped, never filed
+- ✅ Fixes and issue scope meet the minimalism bar: reuse before new code, simplify before completing (`ponytail` and `ce-simplify-code` skills)
 
 ---
 
