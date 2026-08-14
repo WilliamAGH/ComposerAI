@@ -177,8 +177,8 @@ Operational guidance for autonomous contributors extending Composer, an email AI
 - [GT1e] Commit messages: one logical change per commit; follow README guidance; no amend/branch changes without instruction; treat existing changes as intentional.
 - [GT1f] Destructive git commands are prohibited unless explicitly ordered by the user (e.g., `git restore`, `git reset`, force checkout).
 - [GT1g] Treat existing staged/unstaged changes as intentional unless the user says otherwise; never “clean up” someone else’s work unprompted.
-- [GT1h] Examples of write operations that require permission: `git add`, `git commit`, `git checkout`, `git merge`, `git rebase`, `git reset`, `git restore`, `git clean`, `git cherry-pick`.
-- [GT1i] **Repository-Local Writes Only**: NEVER commit or push to this repository from a temporary clone, alternate checkout/worktree, or any other directory copy of the same repo. All git writes must be executed from this exact working tree.
+- [GT1h] A task's authorization covers its worktree lifecycle: branch creation, commits, merge back, and push on `dev`. Destructive commands (`git reset`, `git restore`, `git clean`, `git rebase`, force checkout, `git cherry-pick`) still require explicit permission.
+- [GT1i] **Repository-Local Writes Only**: Git writes run only from this working tree or the task's dedicated worktree; NEVER from unrelated clones, temporary clones, or other directory copies of the repo.
 
 ## [TL1] Tooling & Commands
 
@@ -252,6 +252,9 @@ Before marking task complete:
 - ✅ No automatic migrations; .sql files marked "DO NOT RUN — REVIEW ONLY"
 - ✅ Tests cover new functionality
 - ✅ `make lint` passes
+- ✅ Commits merged to `dev` and pushed
+- ✅ CI run watched to terminal verdict
+- ✅ Covered issues closed
 
 ---
 
